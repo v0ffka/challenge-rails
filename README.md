@@ -49,7 +49,7 @@ Implement a method within the `Offer` model to crawl for and create offers. The 
 https://linksearch.api.cj.com/v2/link-search?website-id=5742006&records-per-page=20
 ```
 
-The documentation for this endpoint can be found [here](http://help.cj.com/en/web_services/link_search_service_rest.htm). **You will be provided with an API key from us**. Use your best judgement to translate the API fields into `Offer` fields. For example, the API field `promotion-end-date` is probably best for `expires_at`. The merchant association should be created from the API field `advertiser-name`. Also, crawling should be idempotent. That is, crawling the API multiple times should **not** create duplicate offers.
+The documentation for this endpoint can be found [here](http://help.cj.com/en/web_services/link_search_service_rest.htm). **You will be provided with an API key from us**. Use your best judgement to translate the API fields into `Offer` fields. For example, the API field `promotion-end-date` is probably best for `expires_at`. The `Merchant` association should be created from the API fields `advertiser-name` and `advertiser-id`. Also, crawling should be idempotent. That is, crawling the API multiple times should **not** create duplicate offers.
 
 ### 4. Build Interface
 
