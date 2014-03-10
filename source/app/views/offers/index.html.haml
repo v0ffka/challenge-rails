@@ -1,0 +1,8 @@
+%table.offers
+  %tr
+    %td
+      = form_for :offers, :url => offers_crawl_path do |f|
+        = f.submit 'Crawl!'
+    %td
+      = pluralize(@offers.size, 'Offer')
+      = render :partial => 'offer', :collection => @offers
